@@ -1,0 +1,525 @@
+body {
+    font: 12px/1.3 Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    overflow-x: hidden;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.22);
+}
+
+/*定义滚动条高宽及背景*/
+
+body::-webkit-scrollbar {
+    width: 3px;
+    background-color: rgba(0, 0, 0, 0.34);
+}
+
+/*定义滚动条*/
+
+body::-webkit-scrollbar-thumb {
+    background-color: #8b8b8b;
+    border-radius: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+    background: #ffffff;
+}
+
+.pure-menu.pure-menu-fixed {
+    z-index: 4;
+}
+
+.splash-container {
+    background: #1f8dd6;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+.splash-subhead {
+    color: white;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+.pure-button {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+.splash-img {
+    margin: 0 auto;
+    background: url(../img/yt.png);
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+a.pure-button-primary {
+    background: white;
+    color: #1f8dd6;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+.pure-table a,
+.xlist a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: 87%;
+    min-height: 12%;
+    z-index: 2;
+    /* background: white; */
+    width: 100%;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.xbox {
+    background: white;
+    /* padding: 1em ; */
+    margin: 10px;
+}
+
+.xbox-border-top {
+    border-top: 1px solid #CFCCC6;
+}
+
+.xlist {
+    padding: 16px 16px 10px 16px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #CFCCC6;
+}
+
+.xarticle-box a {
+    letter-spacing: normal;
+    word-spacing: normal;
+    color: #333;
+    text-decoration: none;
+}
+
+.xface {
+    position: relative;
+    width: 50px;
+}
+
+.xlf {
+    float: left;
+}
+
+.xface img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px #CFCCC6 solid;
+}
+
+.x_detail {
+    margin-left: 60px;
+}
+
+.xarticle_title {
+    margin: 0 0 3px;
+    padding: 5px 0 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.xarticle_f_title {
+    letter-spacing: normal;
+    word-spacing: normal;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.xarticle_f_title,
+.xarticle_f_title a {
+    color: #808080;
+    text-decoration: none;
+}
+
+.xarticle-text {
+    padding: 1px 0 3px;
+    overflow: hidden;
+    line-height: 22px;
+    word-wrap: break-word;
+    font-size: 13px;
+    margin-bottom: 2px;
+    padding-bottom: 0;
+}
+
+.xbc {
+    clear: both;
+}
+
+.xtable-center {
+    width: 100%;
+    text-align: center;
+}
+
+.xtable-border {
+    border-top: none;
+    border-bottom: none;
+}
+
+.xtable-border-bottom {
+    border-top: none;
+}
+
+.x-footer {
+    text-align: center;
+    display: block;
+    clear: both;
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+.x-footer-bom {
+    padding: 20px;
+    background-color: #f2f2f5;
+}
+
+.x-footer-bom a {
+    color: #808080;
+    text-decoration: none;
+}
+
+
+/* 翻页css */
+
+.page-navigator {
+    list-style: none;
+    /* 去掉ul前面的符号 */
+    margin: 0px;
+    /* 与外界元素的距离为0 */
+    padding: 0px;
+    /* 与内部元素的距离为0 */
+    width: auto;
+    /* 宽度根据元素内容调整 */
+}
+
+.page-navigator li {
+    float: left;
+    /* 向左漂移，将竖排变为横排 */
+}
+
+.page-navigator li a,
+.page-navigator li a:visited {
+    /* background-color: #465c71; 背景色 */
+    border: 1px #D3CDC1 solid;
+    /* 边框 */
+    border-left: none;
+    color: #333;
+    /*文字颜色 */
+    display: block;
+    /* 此元素将显示为块级元素，此元素前后会带有换行符 */
+    line-height: 1.35em;
+    /* 行高 */
+    padding: 4px 20px;
+    /* 内部填充的距离 */
+    text-decoration: none;
+    /* 不显示超链接下划线 */
+    white-space: nowrap;
+    /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
+}
+
+.page-navigator li a:hover {
+    background-color: #bfcbd6;
+    /* 背景色 */
+    color: #465c71;
+    /* 文字颜色 */
+    text-decoration: none;
+    /* 不显示超链接下划线 */
+}
+
+/* 文章详情页 */
+
+.x-w-title {
+    margin: 0 0 12px;
+    word-wrap: break-word;
+    color: #000;
+}
+
+.x-w-authorinfo {
+    margin: 0 0 20px;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.x-w-face img {
+    border-radius: 30px;
+}
+
+.x-w-face {
+    margin-right: 10px;
+}
+.post-content {
+    font-size: 16px;
+    line-height: 1.65;
+    word-wrap: break-word;
+}
+
+/* 评论区 */
+
+
+.comment-list,
+.comment-list ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-list li {
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #EEE;
+}
+
+.comment-list li.comment-level-odd {
+    background: #F6F6F3;
+}
+
+.comment-list li.comment-level-even {
+    background: #FFF;
+}
+
+/* .comment-list li.comment-by-author {
+    background: #FFF9E8;
+} */
+
+.comment-list li .comment-reply {
+    text-align: right;
+    font-size: .92857em;
+}
+
+.comment-meta a {
+    color: #999;
+    font-size: .92857em;
+}
+
+.comment-author {
+    display: block;
+    margin-bottom: 3px;
+    color: #444;
+}
+
+.comment-author .avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.comment-author cite {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.comment-list .respond {
+    margin-top: 15px;
+    border-top: 1px solid #EEE;
+}
+
+.respond .cancel-comment-reply {
+    float: right;
+    margin-top: 15px;
+    font-size: .92857em;
+}
+
+#comment-form label {
+    display: block;
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+.textarea
+{
+    width:100%;
+    height:60px;
+}
+
+.comment-input 
+{
+    width:100%;
+    margin-bottom:3px;
+    padding:6px 0;
+}
+
+ 
+@media screen and (max-width:48em) {
+    .x-sm-display {
+        display: none;
+    }
+}
+
+@media (min-width: 16em) {
+    .splash-img {
+        width: 80px;
+        height: 80px;
+    }
+    .sm-1 {
+        display: none;
+    }
+    .sm-2 {
+        width: 100px;
+    }
+    .x-w-title {
+        font-size: 18px;
+    }
+    .post-content {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+}
+
+@media (min-width: 48em) {
+    .content {
+        width: 760px;
+    }
+    .home-menu {
+        text-align: left;
+    }
+    .home-menu ul {
+        float: right;
+    }
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+    .splash-head {
+        font-size: 250%;
+    }
+    .l-box-lrg {
+        border: none;
+    }
+    .splash-img {
+        width: 100px;
+        height: 100px;
+    }
+    .x-w-padding {
+        padding: 10px 20px;
+    }
+    .x-w-title {
+        font-size: 20px;
+    }
+    .post-content {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+}
+
+@media (min-width: 78em) {
+    .content {
+        width: 920px;
+    }
+    .splash-head {
+        font-size: 200%;
+    }
+    .splash-img {
+        width: 130px;
+        height: 130px;
+    }
+    .x-w-padding {
+        padding: 25px 60px;
+    }
+    .x-w-title {
+        font-size: 30px;
+    }
+    .post-content {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+}
+blockquote {
+    background-color: #eae6f3;
+    border-left: 1em solid #5236a0;
+    margin: 1.0em 0 1.0em;
+    padding: 1em 1em 1em 1em;
+    position: relative;
+    color: #888;
+   }
+   blockquote:before {
+     color: #392570;
+     content: "\201C";
+     font-size: 5em;
+     line-height: 0em;
+     margin-right: 0em;
+     vertical-align: -0.4em;
+   }
+   blockquote:after {
+     color: #392570;
+     content: "\201D";
+     font-size: 5em;
+     position:absolute;
+     right:3px;
+     bottom: 0em;
+     line-height: 0.1em;
+   }
+pre {
+ background: #F6F6F3;
+}
+
+/*定义滚动条高宽及背景*/
+
+pre::-webkit-scrollbar {
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.34);
+}
+
+/*定义滚动条*/
+
+pre::-webkit-scrollbar-thumb {
+    background-color: #8b8b8b;
+    border-radius: 5px;
+}
