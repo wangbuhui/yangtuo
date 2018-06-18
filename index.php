@@ -58,7 +58,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                             <tbody>
                                 <tr>
                                     <td>标签：
-                                        <?php $this->tags(',', true, 'NONE'); ?>
+                                        <?php $this->tags(',', true, 'NONE',1); ?>
                                     </td>
                                     <td>评论：
                                         <?php $this->commentsNum(); ?>

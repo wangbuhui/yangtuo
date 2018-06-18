@@ -20,6 +20,7 @@
 
     </div>
     <div class="x-footer-bom ">
-        Copyright © 2018 <a href="#">抓住那只羊驼</a>
+        Copyright © <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"> <?php $this->options->title() ?></a>
     </div>
 </div>
+

@@ -13,7 +13,7 @@ body::-webkit-scrollbar-track {
 /*定义滚动条高宽及背景*/
 
 body::-webkit-scrollbar {
-    width: 3px;
+    width:1px;
     background-color: rgba(0, 0, 0, 0.34);
 }
 
@@ -481,6 +481,7 @@ a.pure-button-primary {
         line-height: 1.65;
     }
 }
+/* 文章内容页CSS */
 blockquote {
     background-color: #eae6f3;
     border-left: 1em solid #5236a0;
@@ -506,20 +507,22 @@ blockquote {
      bottom: 0em;
      line-height: 0.1em;
    }
-pre {
+pre{
  background: #F6F6F3;
 }
-
-/*定义滚动条高宽及背景*/
-
-pre::-webkit-scrollbar {
-    width: 1px;
-    background-color: rgba(0, 0, 0, 0.34);
+code {
+ background-color:#F6F6F3
+}
+.post-content img,
+.comment-content img,
+.post-content video,
+.comment-content video {
+    max-width: 100%;
 }
 
-/*定义滚动条*/
-
-pre::-webkit-scrollbar-thumb {
-    background-color: #8b8b8b;
-    border-radius: 5px;
+.post-content a img,
+.comment-content a img {
+    background: #FFF;
+    position: relative;
+    bottom: -4px;
 }

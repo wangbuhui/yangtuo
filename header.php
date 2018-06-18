@@ -35,7 +35,7 @@
 <body>
 
 <div class=" header ">
-        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed ">
+   <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed ">
             <a href="<?php $this->options->siteUrl(); ?>" class="pure-menu-heading pure-menu-link">
     <?php $this->options->title() ?>
     </a>
@@ -53,21 +53,22 @@
             </a>
         </li>
         <?php endwhile; ?>
-        </div>
-        </div>
-        </div>
+    </ul>
+    </div>
+    </div>
+    </div>
 
-        <div class="splash-container">
-            <div class="splash">
-                <div class="splash-img"></div>
-                <h1 class="splash-head">
-                    <?php $this->options->title(); ?>
-                </h1>
-                <p class="splash-subhead">
-                    <?php $this->options->description() ?>
-                </p>
-                <p>
-                    <a href="<?php $this->options->Github() ?>" class="pure-button pure-button-primary" target="_blank">关注我</a>
-                </p>
-            </div>
+    <div class="splash-container">
+        <div class="splash">
+            <div class="splash-img"></div>
+            <h1 class="splash-head">
+                <?php $this->options->title(); ?>
+            </h1>
+            <p class="splash-subhead">
+                <?php $this->options->description() ?>
+            </p>
+            <p>
+                <a href="<?php $this->options->Github() ?>" class="pure-button pure-button-primary" target="_blank">关注我</a>
+            </p>
         </div>
+    </div>

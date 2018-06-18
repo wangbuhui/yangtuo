@@ -11,12 +11,16 @@
             </h3>
 
             <?php $comments->listComments(); ?>
-
-            <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+          
         </div>
         <?php endif; ?>
 
     </div>
+
+      <div class="xbox">
+            <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+            <div class="xbc"></div>
+            </div>
     <div class="xbox">
 
         <?php if($this->allow('comment')): ?>
@@ -72,9 +76,7 @@
                     <label for="textarea" class="required">
                         <?php _e('内容'); ?>
                     </label>
-                    <textarea name="text" id="textarea" class="textarea" required>
-                        <?php $this->remember('text'); ?>
-                    </textarea>
+                    <textarea name="text" id="textarea" class="textarea" required><?php $this->remember('text'); ?></textarea>
                 </p>
                 <p>
                     <button type="submit" class="pure-button pure-button-primary">
