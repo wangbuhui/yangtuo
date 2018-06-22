@@ -13,7 +13,7 @@ body::-webkit-scrollbar-track {
 /*定义滚动条高宽及背景*/
 
 body::-webkit-scrollbar {
-    width:1px;
+    width: 1px;
     background-color: rgba(0, 0, 0, 0.34);
 }
 
@@ -22,6 +22,24 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background-color: #8b8b8b;
     border-radius: 5px;
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+hr {
+    border: 1px dashed #CCC;
 }
 
 h1,
@@ -46,7 +64,7 @@ label {
 }
 
 .splash-container {
-    background: #1f8dd6;
+    background: #00B86E;
     z-index: 1;
     overflow: hidden;
     width: 100%;
@@ -131,6 +149,7 @@ a.pure-button-primary {
     background: white;
     /* padding: 1em ; */
     margin: 10px;
+    box-shadow: 0 0 5px #c3c3c3;
 }
 
 .xbox-border-top {
@@ -139,9 +158,10 @@ a.pure-button-primary {
 
 .xlist {
     padding: 16px 16px 10px 16px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-color: #CFCCC6;
+}
+
+.xlist-border-bottom {
+    border-bottom: 1px solid #CFCCC6;
 }
 
 .xarticle-box a {
@@ -215,17 +235,12 @@ a.pure-button-primary {
     border-bottom: none;
 }
 
-.xtable-border-bottom {
-    border-top: none;
-}
-
 .x-footer {
     text-align: center;
     display: block;
     clear: both;
     box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.15);
     background-color: #fff;
-    margin-top: 10px;
 }
 
 .x-footer-bom {
@@ -237,7 +252,6 @@ a.pure-button-primary {
     color: #808080;
     text-decoration: none;
 }
-
 
 /* 翻页css */
 
@@ -307,6 +321,7 @@ a.pure-button-primary {
 .x-w-face {
     margin-right: 10px;
 }
+
 .post-content {
     font-size: 16px;
     line-height: 1.65;
@@ -314,7 +329,6 @@ a.pure-button-primary {
 }
 
 /* 评论区 */
-
 
 .comment-list,
 .comment-list ol {
@@ -336,10 +350,6 @@ a.pure-button-primary {
 .comment-list li.comment-level-even {
     background: #FFF;
 }
-
-/* .comment-list li.comment-by-author {
-    background: #FFF9E8;
-} */
 
 .comment-list li .comment-reply {
     text-align: right;
@@ -383,20 +393,36 @@ a.pure-button-primary {
     margin-bottom: .5em;
     font-weight: bold;
 }
-.textarea
-{
-    width:100%;
-    height:60px;
+
+.textarea {
+    width: 100%;
+    height: 60px;
+    background: none;
+    border-style: none none dashed none;
+    border-bottom: 1px dashed #ACA6B3;
 }
 
-.comment-input 
-{
-    width:100%;
-    margin-bottom:3px;
-    padding:6px 0;
+.comment-input {
+    width: 99%;
+    border-style: none none dashed none;
+    border-bottom: 1px dashed #ACA6B3;
+    background: none;
+    padding: 8px 2px;
+    margin-right: 10px;
 }
 
- 
+input,
+textarea {
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none !important;
+    border-bottom: 1px solid #0D8CD4;
+    /* box-shadow: 0 0 10px #719ECE; */
+}
+
 @media screen and (max-width:48em) {
     .x-sm-display {
         display: none;
@@ -420,6 +446,13 @@ a.pure-button-primary {
     .post-content {
         font-size: 14px;
         line-height: 1.55;
+    }
+    .post-list-item {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .xlinks ul li {
+        width: 100%;
     }
 }
 
@@ -457,6 +490,16 @@ a.pure-button-primary {
         font-size: 15px;
         line-height: 1.55;
     }
+    .post-list-item {
+        width: 33.3333%;
+        padding: 15px;
+    }
+    .categorys-title {
+        margin: 15px;
+    }
+    .xlinks ul li {
+        width: 50%;
+    }
 }
 
 @media (min-width: 78em) {
@@ -480,44 +523,72 @@ a.pure-button-primary {
         font-size: 16px;
         line-height: 1.65;
     }
+    .post-list-item {
+        width: 33.3333%;
+        padding: 15px;
+    }
+    .categorys-title {
+        margin: 15px;
+    }
+    .xlinks ul li {
+        width: 33.3333%;
+    }
 }
+
 /* 文章内容页CSS */
+
 blockquote {
-    background-color: #eae6f3;
-    border-left: 1em solid #5236a0;
+    background-color: #E6FAEF;
+    /* border-left: 1em solid #01C26A; */
     margin: 1.0em 0 1.0em;
     padding: 1em 1em 1em 1em;
     position: relative;
     color: #888;
-   }
-   blockquote:before {
-     color: #392570;
-     content: "\201C";
-     font-size: 5em;
-     line-height: 0em;
-     margin-right: 0em;
-     vertical-align: -0.4em;
-   }
-   blockquote:after {
-     color: #392570;
-     content: "\201D";
-     font-size: 5em;
-     position:absolute;
-     right:3px;
-     bottom: 0em;
-     line-height: 0.1em;
-   }
-pre{
- background: #F6F6F3;
 }
+
+blockquote:before {
+    color: #01C26A;
+    content: "\201C";
+    font-size: 5em;
+    line-height: 0em;
+    margin-right: 5px;
+    vertical-align: -0.4em;
+}
+
+blockquote:after {
+    color: #01C26A;
+    content: "\201D";
+    font-size: 5em;
+    position: absolute;
+    right: 3px;
+    bottom: 0em;
+    line-height: 0.1em;
+}
+
+pre {
+    background: #F6F6F3;
+    padding: 3px 10px;
+    font-size: 11px;
+    border-radius: 10px
+}
+
 code {
- background-color:#F6F6F3
+    background-color: #F6F6F3
 }
+
 .post-content img,
 .comment-content img,
 .post-content video,
 .comment-content video {
     max-width: 100%;
+    /* box-shadow: 0 0 8px #719ECE; */
+    border: 1px solid #F7F6F2;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+img:hover {
+    box-shadow: 0 0 8px #ACA6B3;
 }
 
 .post-content a img,
@@ -525,4 +596,87 @@ code {
     background: #FFF;
     position: relative;
     bottom: -4px;
+}
+
+/* 归档 */
+
+.post-lists {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.post-list-item {
+    float: left;
+    height: auto;
+    align-items: center;
+}
+
+.post-lists-body {
+    display: block;
+}
+
+.categorys-title {
+    font-size: 14px;
+    padding: 0px 3px;
+}
+
+.post-list-item-container {
+    border: 1px solid rgba(184, 197, 214, .2);
+    border-radius: 3px;
+    background: #FFF;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+}
+
+.post-list-item-container:hover {
+    box-shadow: 0 1px 10px #999999;
+}
+
+.post-list-item-container .item-label {
+    position: relative;
+    padding: 25px 20px 40px;
+}
+
+.post-list-item-container .item-label .item-meta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 15px 15px;
+    text-align: right;
+}
+
+/* 友链样式 */
+
+.xlinks ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.xlinks ul li {
+    padding: 10px 10px;
+    list-style-type: none;
+    float: left;
+}
+
+.xlinks ul li:hover {
+    background: #f1f1f1;
+    box-shadow: 0 1px 10px #999;
+}
+
+.xlinks ul li a img {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    clear: both;
+}
+
+.xlinks-body {
+    width: calc(100% - 60px);
+    line-height: 20px;
+    float: right;
+    padding: 5px 10px;
 }

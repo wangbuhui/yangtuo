@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico" />
     <title>
         <?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
@@ -26,7 +25,7 @@
     <?php if ($this->options->IcoUrl): ?>
     <link rel="shortcut icon" href="<?php $this->options->IcoUrl() ?>" />
     <?php else: ?>
-    <link rel="shortcut icon" href="<?php $this->options->themeUrl('style/img/favicon.ico'); ?> />    
+    <link rel="shortcut icon" href="<?php $this->options->themeUrl('style/img/favicon.ico'); ?>" />    
     <?php endif; ?>
 
     <!-- 通过自有函数输出HTML头部信息 -->

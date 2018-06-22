@@ -20,23 +20,23 @@
 </div>
 
 <div class="xbox x-sm-display">
-    <div class="xlist">
+    <div class="xlist xlist-border-bottom">
         <b>个人资料</b>
     </div>
-    <div class="xlist">
+    <div class="xlist xlist-border-bottom">
 
         昵称 : <?php $this->author() ?>
     </div>
-    <div class="xlist">
+    <div class="xlist xlist-border-bottom">
         电子邮箱 : <?php $this->author('mail'); ?> 
     </div>
-    <div class="xlist">
+    <div class="xlist xlist-border-bottom">
         介绍 : <?php $this->options->description() ?>
     </div>
-    <div class="xlist">
+    <div class="xlist xlist-border-bottom">
         个性域名 ：<a href="<?php $this->author('url'); ?>"><?php $this->author('url'); ?></a>
     </div>
-    <div class="xlist">
+    <div class="xlist xlist-border-bottom">
         <b> 查看更多</b>
     </div>
 </div>

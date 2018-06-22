@@ -19,13 +19,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <div class="pure-g">
 
                 <div class="pure-u-1 pure-u-md-8-24">
-				    <?php $this->need('sidebar.php'); ?>
+                    <?php $this->need('sidebar.php'); ?>
                 </div>
 
                 <div class="pure-u-1 pure-u-md-16-24">
                     <div class="xbox xbox-border-top">
                         <div class="xlist">
-                            <span><b>全部</b></span> &nbsp;<span>更多</span>
+                            <span> <b> <a href="<?php $this->options->siteUrl() ?>">全部 &nbsp;</a></b></span>
+                            <?php $this->widget('Widget_Metas_Category_List')->parse('<span><a href="{permalink}">{name}</a></span>&nbsp;'); ?>
                         </div>
 
                     </div>
@@ -35,8 +36,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                             <article class="xarticle-box">
                                 <div class="xface xlf">
                                     <a href="<?php $this->author->permalink(); ?>">
-								    	<?php $this->author->gravatar(50); ?> 
-                                        </a>
+                                        <?php $this->author->gravatar(50); ?>
+                                    </a>
                                 </div>
                                 <div class="x_detail">
                                     <div class="xarticle_title">
@@ -54,7 +55,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                             </article>
                             <div class="xbc"></div>
                         </div>
-                        <table class="pure-table xtable-center xtable-border-bottom">
+                        <table class="pure-table xtable-center">
                             <tbody>
                                 <tr>
                                     <td>标签：
@@ -64,7 +65,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                                         <?php $this->commentsNum(); ?>
                                     </td>
                                     <td>
-                                      <a href="<?php $this->categoryUrl(','); ?>"> <?php $this->category(','); ?></a>
+                                        <a href="<?php $this->categoryUrl(','); ?>">
+                                            <?php $this->category(','); ?>
+                                        </a>
                                     </td>
                                 </tr>
 
@@ -73,15 +76,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     </div>
                     <?php endwhile; ?>
                     <div class="xbox">
-                       
-							<?php $this->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
-							<div class="xbc"></div>
+
+                        <?php $this->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+                        <div class="xbc"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-   <?php $this->need('footer.php'); ?>
+        <?php $this->need('footer.php'); ?>
 
     </div>
 
